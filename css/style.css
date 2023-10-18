@@ -1,0 +1,236 @@
+@font-face {
+    font-family: "Poppins";
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url('../fonts/Poppins-ThinItalic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: thin;
+}
+
+body{
+    margin: 0 auto;
+    width: 100%;
+    font-family: "Poppins";
+    background-color: #f5f7eb;
+    color: #323235;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#header{
+    margin: 0 auto;
+    padding: 2em 1em;
+    width: 100%;
+    text-align: center;
+    background-color: #323235;
+    background-image: url('../img/header.png');
+    background-position: center;
+    background-size: cover;
+}
+
+#header h1{
+    margin-top: 0;
+    color: #fff;
+}
+
+#header p{
+    color: #fff;
+    font-weight: thin;
+    font-style: italic;
+}
+
+.text-shadow{
+    text-shadow: 0 2px 5px #000 ;
+}
+
+.tools{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 1em;
+
+}
+
+.tools input,
+.tools select{
+    border: none;
+    margin: 0;
+    padding: 0.5em 1em;
+    height: 3em;
+    border-right: 1px solid #323235;
+    border-radius: 0;
+}
+
+.tools i{
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    margin: 0;
+    height: 3em;
+    padding: 1em;
+}
+
+.tools i:hover{
+    color: #fff;
+    background-color: #f21938;
+    transition: ease-in-out;
+    transition-duration: 250ms;
+}
+
+#addItem{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+@media screen and (max-width: 600px){
+    #addItem{
+        flex-direction: column;
+    }
+
+    .tools input,
+    .tools select{
+    border-right: none;
+    border-bottom: 1px solid #323235;
+    }
+
+}
+
+.list{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 1em;
+    min-height: 60vh;
+}
+
+.list-element-container{
+    padding: 0;
+    margin: 1em auto;
+}
+
+.list-element{
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto 25%;
+    margin: 0 auto;
+    background-color: #66c12b;
+    border-radius: .5em;
+    width: 100%;
+    color: #fff;
+}
+
+@media screen and (max-width: 500px){
+    .list-element{ 
+        grid-template-columns: 100%;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 600px){
+    .list-element{
+        grid-template-columns: 50% 50%;   
+
+    }
+}
+
+.item{
+    overflow: hidden;
+    padding: 1em; 
+}
+
+.store{
+    overflow: hidden;
+    padding: 1em; 
+}
+
+.store::before{
+    content: "\f54e";
+    font-family: 'Font Awesome 6 Free';
+    padding-right: .5em;
+}
+
+.close{
+    text-align: center;
+    background-color: #f21938;
+    border-bottom-right-radius: .5em;
+    border-top-right-radius: .5em;
+    color: #fff;
+    padding: 1em;
+    display: none !important; 
+    vertical-align: middle;
+}
+
+.close:hover{
+    cursor: pointer;
+    transition: ease-in-out;
+    transition-duration: 250ms;
+}
+
+.close.visible{
+    display: block !important;
+    transition: ease-in-out;
+    transition-duration: 250ms;
+}
+
+@media screen and (max-width: 600px){
+    .close.visible{
+        padding-top: 2.7em;
+    }
+}
+
+.list-element:hover{
+    cursor: pointer;
+    background-color: #479316;
+    color: #fff;
+    transition: ease-in-out;
+    transition-duration: 250ms;
+}
+
+.list-element-container.checked{
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto 10%;
+    transition: ease-in-out;
+    transition-duration: 250ms;
+}
+
+@media screen and (max-width: 600px){
+    .list-element-container.checked{
+        grid-template-columns: auto 30%;
+    }
+}
+
+.list-element.checked{
+    text-decoration: line-through;
+    background-color: #a3a3a3;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    transition: ease-in-out;
+    transition-duration: 250ms;
+}
+
+footer{
+    margin: 0 auto;
+    text-align: center;
+    color: #959b74;
+    padding: 2em 1em;
+    width: 100%;
+}
+
+footer a{
+    color: #959b74;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}

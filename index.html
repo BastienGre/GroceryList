@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <link rel="stylesheet" href="css/modern-normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="fonts/font-awesome/css/fontawesome.css" rel="stylesheet">
+        <link href="fonts/font-awesome/css/brands.css" rel="stylesheet">
+        <link href="fonts/font-awesome/css/solid.css" rel="stylesheet">
+        <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
+        <script src="js/script.js" defer></script>
+        <title>Grocery List</title>
+    </head>
+    <body>
+        <header id="header">
+            <h1 class="text-shadow"><i class="fa-solid fa-basket-shopping"></i> Grocery List</h1>
+            <p class="text-shadow">Where is my list again?!</p>
+            <section id="tools" class="tools">
+                <div id="addItem">
+                    <input id="newItemName" type="text" placeholder="Add a new item...">
+                    <select name="newItemStoreName" id="store">
+                        <option value="No Preference">No Preference</option>
+                        <option value="Aldi">Aldi</option>
+                        <option value="Farmers Market">Farmers Market</option>
+                        <option value="Lidl">Lidl</option>
+                        <option value="Safeway">Safeway</option>
+                        <option value="Walmart">Walmart</option>
+                        <option value="Whole Foods">Whole Foods</option>
+                    </select>
+                    <i onclick="addItem()" class="fa-solid fa-plus"></i>
+                </div>
+            </section>
+        </header>
+        <main id="main">
+            <section id="list" class="list">
+                <div class="list-element-container">
+                    <div class="list-element" id="list-element">
+                        <span class="item">sdfsf</span><span class="store">No Preference</span>
+                    </div>
+                        <i class="close fa-solid fa-trash" id="close"></i>
+                    </div>
+            </section>
+        </main>
+        <footer>
+            <p>By <a href="https://www.bastiengrenouilleau.com" target="_blank">Bastien Grenouilleau</a></p>
+        </footer>
+    </body>
+</html>
