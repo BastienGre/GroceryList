@@ -1,3 +1,17 @@
+:root{
+    --color01-normal: #519259;
+    --color01-hover: #287031;
+
+    --color02-normal: #ff7f3f;
+    --color02-hover: #d76024;
+
+    --color03-normal: #2e708c;
+    --color03-hover: #1e556d;
+
+    --color04-normal: #31aa9d;
+    --color04-hover: #148579;
+}
+
 @font-face {
     font-family: "Poppins";
     src: url('../fonts/Poppins-Regular.ttf') format('truetype');
@@ -113,46 +127,133 @@ body{
     min-height: 60vh;
 }
 
-.list-element-container{
-    padding: 0;
+.sublist{
+    padding: 1em;
+    padding-bottom: 3em;
     margin: 1em auto;
-}
-
-.list-element{
-    padding: 0;
-    display: grid;
-    grid-template-columns: auto 25%;
-    margin: 0 auto;
-    background-color: #66c12b;
     border-radius: .5em;
-    width: 100%;
+    box-shadow: rgb(0 0 0 / 0.3) 0 4px 5px;
     color: #fff;
 }
 
-@media screen and (max-width: 500px){
-    .list-element{ 
-        grid-template-columns: 100%;
-    }
+.color-01{
+    background-color: var(--color01-normal);
 }
 
-@media screen and (min-width: 501px) and (max-width: 600px){
-    .list-element{
-        grid-template-columns: 50% 50%;   
+.color-02{
+    background-color: var(--color02-normal);
+}
 
-    }
+.color-03{
+    background-color: var(--color03-normal);
+}
+
+.color-04{
+    background-color: var(--color04-normal);
+}
+
+.sublist-header{
+    padding: 1em;
+    
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.color-01 .sublist-header{
+    border-bottom: var(--color01-hover) dotted 1px;
+}
+
+.color-02 .sublist-header{
+    border-bottom: var(--color02-hover) dotted 1px;
+}
+
+.color-03 .sublist-header{
+    border-bottom: var(--color03-hover) dotted 1px;
+}
+
+.color-04 .sublist-header{
+    border-bottom: var(--color04-hover) dotted 1px;
+}
+
+.completion{
+    text-align: right;
+    overflow: hidden;
+}
+
+.completion::before{
+    content: '\f0ae';
+    font-family: 'Font Awesome 6 Free';
+    padding-right: .5em;
+}
+
+.sublist > ul{
+    padding: 0;
+    margin: 0;
+}
+
+.sublist > ul > li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1px;
+    display: grid;
+    grid-template-columns: 80% auto;
+    height: 4em;
+}
+
+.sublist > ul > li > span{
+    height: 100%;
+    align-items: center;
+    display: flex;
+    padding-left: 1em;
+}
+
+.sublist li:hover{
+    cursor: pointer;
+}
+
+.color-01 li:hover,
+.color-01 li.checked{
+    background-color: var(--color01-hover);
+}
+
+.color-02 li:hover,
+.color-02 li.checked{
+    background-color: var(--color02-hover);
+}
+
+.color-03 li:hover,
+.color-03 li.checked{
+    background-color: var(--color03-hover);
+}
+
+.color-04 li:hover,
+.color-04 li.checked{
+    background-color: var(--color04-hover);
+}
+
+.item:hover{
+    text-decoration: line-through;
+}
+
+.item.checked{
+    text-decoration: line-through;
+}
+
+.sublist li:first-child{
+    margin-top: 1em;
 }
 
 .item{
     overflow: hidden;
-    padding: 1em; 
+    width: 100%;
 }
 
-.store{
+.sublist-store{
     overflow: hidden;
-    padding: 1em; 
 }
 
-.store::before{
+.sublist-store::before{
     content: "\f54e";
     font-family: 'Font Awesome 6 Free';
     padding-right: .5em;
@@ -161,12 +262,9 @@ body{
 .close{
     text-align: center;
     background-color: #f21938;
-    border-bottom-right-radius: .5em;
-    border-top-right-radius: .5em;
+    height: 4em;
     color: #fff;
-    padding: 1em;
     display: none !important; 
-    vertical-align: middle;
 }
 
 .close:hover{
@@ -176,47 +274,25 @@ body{
 }
 
 .close.visible{
-    display: block !important;
+    display: grid !important;
     transition: ease-in-out;
     transition-duration: 250ms;
-}
-
-@media screen and (max-width: 600px){
-    .close.visible{
-        padding-top: 2.7em;
-    }
-}
-
-.list-element:hover{
-    cursor: pointer;
-    background-color: #479316;
-    color: #fff;
-    transition: ease-in-out;
-    transition-duration: 250ms;
-}
-
-.list-element-container.checked{
     padding: 0;
-    display: grid;
-    grid-template-columns: auto 10%;
-    transition: ease-in-out;
-    transition-duration: 250ms;
+    padding-right: 1em;
+    margin: 0;
+    height: 100%;
 }
 
-@media screen and (max-width: 600px){
-    .list-element-container.checked{
-        grid-template-columns: auto 30%;
-    }
+.close::before{
+    display: grid ;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+    padding-left: 1em;
+    margin: 0;
 }
 
-.list-element.checked{
-    text-decoration: line-through;
-    background-color: #a3a3a3;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    transition: ease-in-out;
-    transition-duration: 250ms;
-}
 
 footer{
     margin: 0 auto;

@@ -20,13 +20,6 @@
                 <div id="addItem">
                     <input id="newItemName" type="text" placeholder="Add a new item...">
                     <select name="newItemStoreName" id="store">
-                        <option value="No Preference">No Preference</option>
-                        <option value="Aldi">Aldi</option>
-                        <option value="Farmers Market">Farmers Market</option>
-                        <option value="Lidl">Lidl</option>
-                        <option value="Safeway">Safeway</option>
-                        <option value="Walmart">Walmart</option>
-                        <option value="Whole Foods">Whole Foods</option>
                     </select>
                     <i onclick="addItem()" class="fa-solid fa-plus"></i>
                 </div>
@@ -34,12 +27,25 @@
         </header>
         <main id="main">
             <section id="list" class="list">
-                <div class="list-element-container">
-                    <div class="list-element" id="list-element">
-                        <span class="item">sdfsf</span><span class="store">No Preference</span>
-                    </div>
-                        <i class="close fa-solid fa-trash" id="close"></i>
-                    </div>
+                <div class="sublist color-01" name="Walmart">
+                    <header class="sublist-header" id="sublist-header">
+                        <span class="sublist-store">Walmart</span><span class="completion">0/2</span>
+                    </header>
+                    <ul>
+                        <li>
+                            <span class="item">Soap</span>
+                            <i class="close fa-solid fa-trash" id="close"></i>
+                        </li>
+                        <li>
+                            <span class="item">Soap</span>
+                            <i class="close fa-solid fa-trash" id="close"></i>
+                        </li>
+                        <li>
+                            <span class="item">Soap</span>
+                            <i class="close fa-solid fa-trash" id="close"></i>
+                        </li>
+                    </ul>
+                </div>
             </section>
         </main>
         <footer>
